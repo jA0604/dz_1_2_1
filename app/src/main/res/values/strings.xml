@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">dz_1_2_1</string>
+    <string name="user_name">Имя пользователя</string>
+    <string name="e_mail">Электронная почта</string>
+    <string name="title_subscribe">Подписка</string>
+    <string name="ok_button">OK</string>
+    <string name="clear_button">Очистить</string>
+</resources>
