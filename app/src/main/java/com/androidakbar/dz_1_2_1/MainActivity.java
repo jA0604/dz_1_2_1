@@ -8,23 +8,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    protected TextView textView;
+    protected EditText userName;
+    protected EditText userMail;
+    protected String message = "Подписка на рассылку успешно оформлена для пользователя ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView = (TextView) findViewById(R.id.messageView);
+        userName = (EditText) findViewById(R.id.editTextTextPersonName);
+        userMail = (EditText) findViewById(R.id.editTextTextEmailAddress);
+
     }
 
     public void clickOk(View view) {
-        TextView textView = (TextView) findViewById(R.id.messageView);
-        EditText userName = (EditText) findViewById(R.id.editTextTextPersonName);
-        EditText userMail = (EditText) findViewById(R.id.editTextTextEmailAddress);
-        textView.setText("Подписка на рассылку успешно оформлена для пользователя "
-                + userName.getText() + " на электронный адрес " + userMail.getText());
+        message += userName.getText() + " на электронный адрес " + userMail.getText();
+        textView.setText(message);
     }
 
     public void clickClear(View view) {
-        TextView textView = (TextView) findViewById(R.id.messageView);
         textView.setText("");
     }
 }
